@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "summon characters",
+  "description": "let's summon characters",
+  "version": "1.0",
+  "action": {},
+  "permissions": ["activeTab", "storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["build/content_script.js"],
+      "css": ["public/global.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["public/images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "build/background.js"
+  }
+}

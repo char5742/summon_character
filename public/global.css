@@ -1,0 +1,15 @@
+#summonCharacters {
+  position: fixed;
+  z-index: 1000;
+  top: var(--top);
+  bottom: var(--bottom);
+  left: var(--left);
+  right: var(--right);
+  width: 3rem;
+}
+
+#summonCharacters img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
